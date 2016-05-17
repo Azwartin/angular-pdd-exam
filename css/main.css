@@ -1,0 +1,91 @@
+html, body{
+	margin: 0 auto;
+	padding: 0;
+	background-color:white;
+}
+
+.content{
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+	width: 80%;
+	background-color:#EEEEEE;
+}
+
+.quest-answer{
+	font-family: cursive;
+	font-size: 100%;
+}
+
+.quest-answer .btnNext{
+	width: 50%;
+	margin: 0 auto;
+	padding: 5px;
+	border-radius: 5px;
+	background-color:#01579B;
+	color: white;
+	cursor: pointer;
+}
+
+.quest-answer .btnNext:hover{
+	background-color: #2962FF;
+}
+
+.quest-variants{
+	list-style-type: none;
+	padding: 0;
+}
+
+.quest-variants li, exam .quest{
+	display:block;
+	width: 70%;
+	margin: 4px auto;
+	padding: 5px;
+	background-color: #BDBDBD;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.quest-variants li:hover, exam  .quest-variants .selected{
+	background-color:#757575;
+	color:white;
+}
+
+.quest {
+	cursor: default;
+}
+
+result .quest-nav ul{
+	padding: 0;
+	list-style-type: none;
+}
+
+result .quest-nav li{
+	display: inline-block;
+	width: 40px;
+	padding:15px;
+	vertical-align: middle;
+	background-color: #B71C1C;
+	border-radius: 5px;
+	border:1px solid gray;
+	cursor: pointer;
+}
+
+result .quest-nav li:hover{
+	background-color:#D50000;	
+}
+
+result .quest-nav .right{
+	background-color: #64DD17;
+}
+
+result .quest-nav .right:hover, result .quest-variants .right{
+	background-color: #76FF03 !important;
+}
+
+result .quest-variants .user-answer{
+	border: 2px solid #212121;
+	background-color: #D50000
+}
+
+

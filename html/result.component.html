@@ -1,0 +1,30 @@
+<div>
+	<h2>{{ right }} of {{ all }}</h2>
+	<nav class = "quest-nav">
+		<ul>
+			<li *ngFor="let quest of innerDataService.questions; let i = index"
+				[class.right]="innerDataService.answers[i] == innerDataService.questions[i].right"
+				(click)="questSelect(i)"
+			>
+				{{i + 1}}
+			</li>
+		</ul>
+	</nav>
+	<div *ngIf = "selectedQuest" class = "question-post-view">
+		<div class = 'quest'>
+			{{ selectedQuest.question }}
+		</div>
+		<div *ngIf="selectedQuest.picture" class = "quest-pic">
+			<img src = "{{ selectedQuest.picture }}" >
+		</div>
+		<div class = "quest-answer">
+			<ul class = "quest-variants">
+				<li *ngFor="let variant of selectedQuest.variants; let i = index"
+					[class.right]="i === selectedQuest.right"
+					[class.user-answer]="i === innerDataService.answers[selectedId]"
+				>
+					{{ variant }}
+				</li>
+			</ul>
+		</div>
+	</div>

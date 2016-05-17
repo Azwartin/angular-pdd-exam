@@ -1,0 +1,19 @@
+<div *ngIf = "questions[curQuestionId]">
+	<div class = 'quest'>
+		{{ questions[curQuestionId].question }}
+	</div>
+	<div *ngIf="questions[curQuestionId].picture" class = "quest-pic">
+		<img src = "{{ questions[curQuestionId].picture }}" >
+	</div>
+	<div class = "quest-answer">
+		<ul class = "quest-variants">
+			<li *ngFor="let variant of questions[curQuestionId].variants"
+				(click)="selectVariant(variant)"
+				[class.selected]="variant==selectedVariant"
+			>
+				{{ variant }}
+			</li>
+		</ul>
+		<div class = "btnNext" (click)="nextQuestion()">Следующий вопрос</div>
+	</div>
+</div>
