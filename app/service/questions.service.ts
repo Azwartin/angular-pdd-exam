@@ -16,13 +16,14 @@ export class QuestionService {
 	) { 
 	}
 
-	getQuestions() {
+	getQuestions(id) {
+		this.biletUrl = "data/b"+ id +".json";
 		return this.http.get(this.biletUrl).map(res => {
 			return res.json();
 		});
 	}
 
-	adapt(data){
+	adapt(data){//todo внедрить в getQuestions
 		return data.map(item => {
 			let quest = new Question();
 			quest.question = item.quest;

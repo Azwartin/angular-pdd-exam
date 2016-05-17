@@ -27,6 +27,5 @@ export class ResultComponent {
 	questSelect(i){
 		this.selectedId = i;
 		this.selectedQuest = this.innerDataService.questions[this.selectedId];
-		alert(this.selectedQuest.question);
 	}
 }

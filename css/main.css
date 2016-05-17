@@ -31,12 +31,12 @@ html, body{
 	background-color: #2962FF;
 }
 
-.quest-variants{
+.quest-variants, .bilets{
 	list-style-type: none;
 	padding: 0;
 }
 
-.quest-variants li, exam .quest{
+.quest-variants li, exam .quest, .quest-nav ul{
 	display:block;
 	width: 70%;
 	margin: 4px auto;
@@ -55,12 +55,7 @@ html, body{
 	cursor: default;
 }
 
-result .quest-nav ul{
-	padding: 0;
-	list-style-type: none;
-}
-
-result .quest-nav li{
+result .quest-nav li, .bilets li{
 	display: inline-block;
 	width: 40px;
 	padding:15px;
@@ -69,6 +64,21 @@ result .quest-nav li{
 	border-radius: 5px;
 	border:1px solid gray;
 	cursor: pointer;
+}
+
+.bilets li{
+	box-sizing:border-box;
+	margin: 5px 1%;
+	width: 31%;
+	padding: 10px;
+	background-color: #303F9F;
+	font-size: 100%;
+	color: #8C9EFF;
+}
+
+.bilets li:hover, .bilets .selected{
+	background-color: #1A237E;
+	color:white;
 }
 
 result .quest-nav li:hover{

@@ -7,6 +7,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from
 
 import { ExamComponent } from './exam.component';
 import { ResultComponent } from './result.component';
+import { SelectBiletComponent } from './selectBilet.component';
 
 import { QuestionService } from './../service/questions.service';
 import { InnerDataService } from './../service/innerdata.service';
@@ -27,10 +28,15 @@ import { InnerDataService } from './../service/innerdata.service';
 })	
 @RouteConfig([
 	{
-		path: '/exam',
+		path: '/select',
+		name:'Select',
+		component: SelectBiletComponent,
+		useAsDefault: true,
+	},
+	{
+			path: '/exam',
 		name: 'Exam',
 		component: ExamComponent,
-		useAsDefault: true,
 	},
 	{
 		path: '/result',

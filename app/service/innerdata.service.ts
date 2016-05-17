@@ -22,4 +22,8 @@ export class InnerDataService{
 	setAnswers(isRight: number[]){
 		this.answers = isRight;
 	}
+
+	setAnswer(id:number, answer: number){
+		this.answers[id] = answer;
+	}
 }
