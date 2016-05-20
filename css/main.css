@@ -12,14 +12,14 @@ html, body{
 	background-color:#EEEEEE;
 }
 
-.quest-answer{
+.quest-answer, .quest{
 	font-family: cursive;
 	font-size: 100%;
 }
 
-.quest-answer .btnNext{
+.btn-next, .btn-stop, .btn-start{
 	width: 50%;
-	margin: 0 auto;
+	margin: 5px auto;
 	padding: 5px;
 	border-radius: 5px;
 	background-color:#01579B;
@@ -27,9 +27,23 @@ html, body{
 	cursor: pointer;
 }
 
-.quest-answer .btnNext:hover{
+.btn-next:hover{
 	background-color: #2962FF;
 }
+
+.btn-start{
+	padding: 5px 10%;
+	display:block;
+	background-color: #64DD17;
+	color: #212121;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.btn-stop{
+	background-color: #F44336;
+}
+
 
 .quest-variants, .bilets{
 	list-style-type: none;
@@ -97,5 +111,3 @@ result .quest-variants .user-answer{
 	border: 2px solid #212121;
 	background-color: #D50000
 }
-
-

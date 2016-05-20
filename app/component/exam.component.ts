@@ -23,8 +23,6 @@ export class ExamComponent {
 
 		this.selectedVariant = '';
 		if (this.curQuestionId + 1 >= this.questions.length) {
-			//this.innerDataService.setQuestions(this.questions);
-			//this.innerDataService.setAnswers(this.answers);
 			this.router.navigate(['Result', { }]);
 		} else {
 			this.curQuestionId++;
@@ -35,6 +33,10 @@ export class ExamComponent {
 		this.selectedVariant = variant;
 	}
 
+	toResult(){
+		this.router.navigate(['Result', {}]);
+	}
+
 	constructor(
 		private router: Router,
 		private innerDataService: InnerDataService
@@ -43,6 +45,8 @@ export class ExamComponent {
 		this.selectedVariant = '';
 		this.questions = this.innerDataService.questions;
 		this.answers = this.innerDataService.answers;
-		//this.innerDataService.setQuestions();
+		if(!this.questions || this.questions.length == 0){
+			this.router.navigate(['Select', { }]);
+		}
 	}
 }

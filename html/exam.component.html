@@ -1,5 +1,8 @@
 <div *ngIf = "questions[curQuestionId]">
 	<div class = 'quest'>
+		<div>
+			Вопрос {{ curQuestionId + 1 }} из {{ questions.length }}
+		</div>
 		{{ questions[curQuestionId].question }}
 	</div>
 	<div *ngIf="questions[curQuestionId].picture" class = "quest-pic">
@@ -14,6 +17,7 @@
 				{{ variant }}
 			</li>
 		</ul>
-		<div class = "btnNext" (click)="nextQuestion()">Следующий вопрос</div>
+		<div class = "btn-next" (click)="nextQuestion()">Следующий вопрос</div>
+		<div class = "btn-stop" (click)="toResult()">Закончить тест</div>
 	</div>
 </div>

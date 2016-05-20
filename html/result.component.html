@@ -1,5 +1,5 @@
 <div>
-	<h2>{{ right }} of {{ all }}</h2>
+	<h2>Вы ответили правильно на {{ right }} из {{ all }}</h2>
 	<nav class = "quest-nav">
 		<ul>
 			<li *ngFor="let quest of innerDataService.questions; let i = index"
@@ -26,5 +26,10 @@
 					{{ variant }}
 				</li>
 			</ul>
+			<div>
+				{{ selectedQuest.comment }}
+			</div>
 		</div>
 	</div>
+	<div class = 'btn-next' (click)="toSelect()">Пройти новый тест</div>
+</div>
